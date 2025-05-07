@@ -1,12 +1,21 @@
 /* Start Variable */
+@font-face {
+  font-family: "BellMT";
+  src: url("../fonts/Bell\ MT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   /* Colors */
-  --primary-color: #000;
+  --primary-color: #6a0084;
+  --secondry-color: #fcc07e;
+  --border-shadow-color: rgb(135 130 130 / 15%);
   /* Transition */
   --transition: 0.5s;
   /* Padding */
   --main-padding: 50px;
   /* Fonts */
+  --main-font: "BellMT", sans-serif;
   /* Font Awesome */
   --fa-style-family-classic: "Font Awesome 6 Free";
 }
@@ -17,6 +26,10 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: var(--main-font);
+}
+
 img {
   max-width: 100%;
 }
@@ -45,14 +58,17 @@ input {
 
 /* End Global Role */
 /* Start Card */
-.displayProperty {
+.displayMainCard {
   position: relative;
   background-color: white;
   padding: var(--main-padding) 0;
   overflow: hidden;
   border-radius: 10px;
 }
-.displayProperty .item-head {
+.displayMainCard .localcontainer{
+  position: relative;
+}
+.displayMainCard .item-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,7 +76,7 @@ input {
   position: relative;
   z-index: 2;
 }
-.displayProperty .box {
+.displayMainCard .box {
   position: relative;
   display: block;
   flex-wrap: wrap;
@@ -68,27 +84,28 @@ input {
   border: 1px solid #eee;
   transition: var(--transition);
 }
-.displayProperty .box:hover {
+.displayMainCard .box:hover {
   transform: translateY(-10px);
 }
-.displayProperty .swiper {
+.displayMainCard .swiper {
   padding: 20px 0;
 }
-.displayProperty .box .image {
+.displayMainCard .box .image {
   width: 100%;
-  height: 200px;
-  background-color: var(--primary-color);
+  /* height: 200px; */
+  aspect-ratio: 4 / 2;
+  background-color: #eee;
   border-radius: 10px;
   position: relative;
-  aspect-ratio: 4 / 3;
 }
-.displayProperty .box .image img {
+.displayMainCard .box .image img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
-  object-fit: cover; /* تظبط الصورة جوه البوكس */
+  object-fit: cover;
 }
-.displayProperty .box .details-box {
+.displayMainCard .box .details-box {
+  color: black;
   background-color: white;
   width: 100%;
   border-bottom-left-radius: 10px;
@@ -97,62 +114,59 @@ input {
   padding: 10px;
   /* padding-bottom: 0; */
 }
-.displayProperty .box .details-box > div {
-  display: flex;
-  justify-content: space-between;
-}
-.displayProperty .box .details-box p {
+.displayMainCard .box .details-box h2 {
   color: var(--color-text);
-}
-.displayProperty .box .details-box p:first-child {
-  color: black;
-  font-size: 19px;
-  margin: 0;
-}
-.displayProperty .box .details-box h3 {
-  color: var(--primary-color);
-  font-size: 25px;
-  /* font-weight: bold; */
-  margin: 5px 0;
-  direction: ltr;
-}
-.displayProperty .box .details-box h3 sub {
-  color: black;
-  font-weight: normal;
-  font-size: 16px;
-}
-.displayProperty .box .details-box p.address {
-  color: var(--color-text);
-  display: flex;
-}
-.displayProperty .box .details-box p.address span {
-  color: var(--color-text);
-  white-space: nowrap;
+  font-size: 20px;
   overflow: hidden;
+  white-space: nowrap;
 }
-.displayProperty .box .details-box p.address img {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-}
-.displayProperty .box .details-box ul.sub {
+.displayMainCard .box .details-box .rate {
   display: flex;
-  margin: 18px 0;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
 }
-.displayProperty .box .details-box ul.sub li {
+.displayMainCard .box .details-box .address {
+  font-size: 16px;
+  color: #727373;
+  overflow: hidden; /* يخفي أي حاجة برا العنصر */
+  white-space: nowrap; /* يمنع النزول لسطر جديد */
+  text-overflow: ellipsis; /* يحط ... بدل الكلام الزيادة */
+  margin: 5px 0;
+}
+.displayMainCard .box .details-box .category {
+  font-size: 13px;
+  width: fit-content;
+  padding: 2px 8px;
+  border: 1px solid var(--border-shadow-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  border: 1px solid #ccc;
   color: black;
-  font-size: 12px;
-  padding: 3px 12px;
-  margin-right: 5px;
-  border: 1px solid rgb(90 199 189 / 25%);
-  border-radius: 22px;
-  transition: var(--transition);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
 }
-.displayProperty .box .details-box ul.sub li:hover {
-  color: var(--primary-color);
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 15px;
+  content: unset;
 }
-.displayProperty .box .details-box ul.sub li span.icon {
-  color: var(--primary-color);
-  margin-left: 4px;
+/* لو عايز تحركهم بعيد شوية عن الـ Swiper */
+.swiper-button-next {
+  right: -30px;
+}
+.swiper-button-prev {
+  left: -30px;
 }
 /* End Card */

@@ -1,6 +1,6 @@
 // Start Feature Property
-if (document.querySelector(".displayProperty .swiper")) {
-  const swiper = new Swiper(".displayProperty .swiper", {
+if (document.querySelector(".displayMainCard .swiper")) {
+  const swiper = new Swiper(".displayMainCard .swiper", {
     // Optional parameters
     direction: "horizontal",
     loop: false,
