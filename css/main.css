@@ -1,0 +1,158 @@
+/* Start Variable */
+:root {
+  /* Colors */
+  --primary-color: #000;
+  /* Transition */
+  --transition: 0.5s;
+  /* Padding */
+  --main-padding: 50px;
+  /* Fonts */
+  /* Font Awesome */
+  --fa-style-family-classic: "Font Awesome 6 Free";
+}
+/* End Variable */
+/* Start Global Role */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+.clr {
+  clear: both;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+a:active {
+  text-decoration: none;
+}
+input {
+  border: none;
+}
+
+/* End Global Role */
+/* Start Card */
+.displayProperty {
+  position: relative;
+  background-color: white;
+  padding: var(--main-padding) 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.displayProperty .item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+.displayProperty .box {
+  position: relative;
+  display: block;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: var(--transition);
+}
+.displayProperty .box:hover {
+  transform: translateY(-10px);
+}
+.displayProperty .swiper {
+  padding: 20px 0;
+}
+.displayProperty .box .image {
+  width: 100%;
+  height: 200px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+.displayProperty .box .image img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  object-fit: cover; /* تظبط الصورة جوه البوكس */
+}
+.displayProperty .box .details-box {
+  background-color: white;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 0px 3px 1px var(--border-shadow-color);
+  padding: 10px;
+  /* padding-bottom: 0; */
+}
+.displayProperty .box .details-box > div {
+  display: flex;
+  justify-content: space-between;
+}
+.displayProperty .box .details-box p {
+  color: var(--color-text);
+}
+.displayProperty .box .details-box p:first-child {
+  color: black;
+  font-size: 19px;
+  margin: 0;
+}
+.displayProperty .box .details-box h3 {
+  color: var(--primary-color);
+  font-size: 25px;
+  /* font-weight: bold; */
+  margin: 5px 0;
+  direction: ltr;
+}
+.displayProperty .box .details-box h3 sub {
+  color: black;
+  font-weight: normal;
+  font-size: 16px;
+}
+.displayProperty .box .details-box p.address {
+  color: var(--color-text);
+  display: flex;
+}
+.displayProperty .box .details-box p.address span {
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.displayProperty .box .details-box p.address img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.displayProperty .box .details-box ul.sub {
+  display: flex;
+  margin: 18px 0;
+}
+.displayProperty .box .details-box ul.sub li {
+  color: black;
+  font-size: 12px;
+  padding: 3px 12px;
+  margin-right: 5px;
+  border: 1px solid rgb(90 199 189 / 25%);
+  border-radius: 22px;
+  transition: var(--transition);
+}
+.displayProperty .box .details-box ul.sub li:hover {
+  color: var(--primary-color);
+}
+.displayProperty .box .details-box ul.sub li span.icon {
+  color: var(--primary-color);
+  margin-left: 4px;
+}
+/* End Card */
