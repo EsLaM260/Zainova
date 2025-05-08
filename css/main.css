@@ -57,6 +57,37 @@ input {
 }
 
 /* End Global Role */
+/* Start Header */
+header{
+  padding: 5px 30px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--border-shadow-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+header.backGround{
+  background-color: white;
+}
+header .icon{
+  width: 100px;
+}
+header .list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* End Header */
+/* Start Main Page */
 /* Start Card */
 .displayMainCard {
   position: relative;
@@ -65,7 +96,7 @@ input {
   overflow: hidden;
   border-radius: 10px;
 }
-.displayMainCard .localcontainer{
+.displayMainCard .localcontainer {
   position: relative;
 }
 .displayMainCard .item-head {
@@ -92,7 +123,6 @@ input {
 }
 .displayMainCard .box .image {
   width: 100%;
-  /* height: 200px; */
   aspect-ratio: 4 / 2;
   background-color: #eee;
   border-radius: 10px;
@@ -112,7 +142,6 @@ input {
   border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 3px 1px var(--border-shadow-color);
   padding: 10px;
-  /* padding-bottom: 0; */
 }
 .displayMainCard .box .details-box h2 {
   color: var(--color-text);
@@ -145,7 +174,6 @@ input {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
-
 .swiper-button-next,
 .swiper-button-prev {
   background-color: white;
@@ -170,3 +198,4 @@ input {
   left: -30px;
 }
 /* End Card */
+/* End Main Page */

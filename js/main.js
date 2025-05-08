@@ -1,4 +1,22 @@
-// Start Feature Property
+
+
+// Start Header
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 200) {
+    header.classList.add("backGround");
+  } else {
+    header.classList.remove("backGround");
+  }
+});
+// End Header
+
+
+
+
+
+// Start Main Card
 if (document.querySelector(".displayMainCard .swiper")) {
   const swiper = new Swiper(".displayMainCard .swiper", {
     // Optional parameters
@@ -40,4 +58,4 @@ if (document.querySelector(".displayMainCard .swiper")) {
     },
   });
 }
-// End Feature PropertyF
+// End Main Card
