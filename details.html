@@ -23,11 +23,348 @@
   </head>
   <body>
     <!-- Start Fixed -->
+    <!-- Start Fixed Services -->
+    <div class="fixedService" id="fixedService">
+      <div class="card" onclick="event.stopPropagation()">
+        <div class="close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <h4 id="fs-title">Title</h4>
+        <p class="info" id="fs-info">40 mins <span>-</span> Male only</p>
+        <p class="price">
+          EGP <span id="fs-price">121</span>
+          <span class="discount" id="fs-discount"></span>
+        </p>
+        <p class="markting" id="fs-description">وصف الخدمة هنا</p>
+        <ul id="fs-features"></ul>
+        <a href="#" class="link">Add to booking</a>
+      </div>
+    </div>
+
+    <!-- End Fixed Services -->
     <!-- End Fixed -->
 
     <!-- Start Header -->
+    <header>
+      <div class="container">
+        <div class="icon">
+          <img src="image/zainova_logo.png" alt="" />
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <ul class="list" id="navList">
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">List your bus</a></li>
+        </ul>
+      </div>
+    </header>
     <!-- End Header -->
 
+    <!-- Start Sub Header -->
+    <div class="subHeader">
+      <div class="container"></div>
+    </div>
+    <!-- End Sub Header -->
+
+    <div class="detailsPage">
+      <div class="container">
+        <!-- Start quickMove -->
+        <div class="quickMove">
+          <a href="/">Home</a>
+          <span class="separator">·</span>
+          <a href="/barbershops">Barbershops</a>
+          <span class="separator">·</span>
+          <span class="title">صالون جدو - مدينة نصر</span>
+        </div>
+        <!-- End quickMove -->
+        <!-- Start Main Info -->
+        <div class="mainInfo">
+          <h2>Title Main Test</h2>
+          <div class="InfoAndAction">
+            <div class="subInfo">
+              <div class="rate">
+                4.7
+                <i class="fa-solid fa-star"></i>
+                <span>(184)</span>
+              </div>
+              <span class="separator">·</span>
+              <div class="time">
+                <span>Closed</span>
+                - opens at 9:30 AM
+              </div>
+              <span class="separator">·</span>
+              <div class="address">
+                Al Manteqah as Sadesah, Nasr City, محافظة القاهرة
+              </div>
+            </div>
+            <div class="action">
+              <div class="icon share">
+                <i class="fa-solid fa-share"></i>
+              </div>
+              <div class="icon like">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Main Info -->
+        <!-- Start Gallery  -->
+        <div class="gallery">
+          <div class="main-image">
+            <img
+              id="mainImage"
+              src="image/e47c5cd6-c96c-4cf6-99a3-61f6561cd79b.avif"
+              alt="Main" />
+          </div>
+          <div class="thumbnails">
+            <img
+              class="thumb"
+              src="image/e47c5cd6-c96c-4cf6-99a3-61f6561cd79b.avif"
+              alt="Thumb 1" />
+            <img
+              class="thumb"
+              src="image/e47c5cd6-c96c-4cf6-99a3-61f6561cd79b.avif"
+              alt="Thumb 2" />
+            <img
+              class="thumb"
+              src="image/e1734847-6c9e-4bd8-b4ee-803becd25053.avif"
+              alt="Thumb 3" />
+            <img
+              class="thumb"
+              src="image/e1734847-6c9e-4bd8-b4ee-803becd25053.avif"
+              alt="Thumb 3" />
+            <img
+              class="thumb"
+              src="image/e1734847-6c9e-4bd8-b4ee-803becd25053.avif"
+              alt="Thumb 3" />
+          </div>
+        </div>
+        <!-- End Gallery  -->
+        <!-- Start Main Content -->
+        <div class="mainContent">
+          <div class="allDetails">
+            <!-- Start Servise -->
+            <div class="mainServise">
+              <h3>Services</h3>
+              <div class="tabs-container">
+                <div class="arrow" onclick="scrollTabs(-100)">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="tabs-wrapper" id="tabsWrapper">
+                  <div class="tab active" onclick="selectTab(this, 'hair')">
+                    خدمات حلاقة الشعر والذقن
+                  </div>
+                  <div class="tab" onclick="selectTab(this, 'face')">
+                    العناية ببشرة الوجه
+                  </div>
+                  <div class="tab" onclick="selectTab(this, 'treatment')">
+                    علاج الشعر والعناية
+                  </div>
+                  <div class="tab" onclick="selectTab(this, 'offers')">
+                    عروض ووصفات
+                  </div>
+                  <div class="tab" onclick="selectTab(this, 'others')">
+                    أخرى
+                  </div>
+                  <div class="tab" onclick="selectTab(this, 'vip')">VIP</div>
+                </div>
+                <div class="arrow" onclick="scrollTabs(100)">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="services" id="services">
+                <!-- Default content (hair) -->
+              </div>
+            </div>
+            <!-- End Servise -->
+            <!-- Start Team -->
+            <div class="team">
+              <h3>Team</h3>
+              <div class="team-members">
+                <div class="member">
+                  <!-- صورة (احذفها لو مفيش صورة) -->
+                  <!-- <img src="ahmed.jpg" alt="احمد" class="avatar" /> -->
+
+                  <!-- لو مفيش صورة -->
+                  <div class="circle">أ</div>
+
+                  <div class="rating"><span>4.3 ★</span></div>
+                  <div class="name">احمد</div>
+                </div>
+
+                <div class="member">
+                  <!-- <img src="abdelrahman.jpg" alt="عبدالرحمن" class="avatar" /> -->
+                  <div class="circle">ع</div>
+                  <div class="name">عبدالرحمن</div>
+                </div>
+
+                <div class="member">
+                  <!-- <img src="waleed.jpg" alt="وليد" class="avatar" /> -->
+                  <div class="circle">و</div>
+                  <div class="name">وليد</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team -->
+            <!-- Start Reviews -->
+            <div class="reviews">
+              <h3 class="section-title">Reviews</h3>
+              <div class="review-list">
+                <div class="review-item">
+                  <div class="review-top">
+                    <div class="avatar">M</div>
+                    <div class="info">
+                      <strong>Michael N</strong>
+                      <span class="date">Sat, Mar 29, 2025 at 2:50 AM</span>
+                    </div>
+                  </div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-stroke"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <p class="review-text">
+                    التجربة اليوم مكنتش ألطف حاجة حصل إن دخان ميعادين في بعض و
+                    دى مكنتش مشكلة أوي بالنسبالي
+                  </p>
+                </div>
+
+                <div class="review-item">
+                  <div class="review-top">
+                    <div class="avatar">K</div>
+                    <div class="info">
+                      <strong>Kyrillos T</strong>
+                      <span class="date">Sun, Mar 23, 2025 at 1:52 AM</span>
+                    </div>
+                  </div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-stroke"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <p class="review-text">ممتاز وأفضل من رائع</p>
+                </div>
+
+                <div class="review-item">
+                  <div class="review-top">
+                    <div class="avatar">A</div>
+                    <div class="info">
+                      <strong>Abdelrahman G</strong>
+                      <span class="date">Fri, Jan 31, 2025 at 9:37 AM</span>
+                    </div>
+                  </div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <p class="review-text">Perfect!</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Reviews -->
+            <!-- Start About -->
+            <div class="about">
+              <h3>About</h3>
+              <p>
+                Welcome to Jedo Salon. We pay attention to the smallest details
+                for your comfort, especially with our Jedo hairstylists and the
+                services we offer in hair care, treating damaged and split hair,
+                treating dry, sensitive, and oily skin, correcting hair color in
+                all shades, and other services. We are honored by your presence,
+                booking with us, and choosing a time that suits you during our
+                working hours.
+              </p>
+              <div class="map">
+                <a
+                  href="https://maps.google.com/?daddr=Al+Manteqah+as+Sadesah,+Nasr+City,+Cairo,+Egypt"
+                  target="_blank">
+                  <img
+                    src="image/map.png"
+                    alt="Map location"
+                    class="map-image" />
+                </a>
+              </div>
+            </div>
+            <!-- End About -->
+            <!-- Start OpeningTime -->
+            <section class="opening-info">
+              <div class="left">
+                <h2>Opening times</h2>
+                <ul>
+                  <li>
+                    <span class="dot"></span> Monday
+                    <span class="time">9:30 AM – 12:00 AM</span>
+                  </li>
+                  <li>
+                    <span class="dot"></span> Tuesday
+                    <span class="time">9:30 AM – 12:00 AM</span>
+                  </li>
+                  <li>
+                    <span class="dot"></span> Wednesday
+                    <span class="time">9:30 AM – 12:00 AM</span>
+                  </li>
+                  <li>
+                    <span class="dot"></span> Thursday
+                    <span class="time">9:30 AM – 12:00 AM</span>
+                  </li>
+                  <li class="bold">
+                    <span class="dot"></span> Friday
+                    <span class="time">9:30 AM – 12:00 AM</span>
+                  </li>
+                  <li>
+                    <span class="dot"></span> Saturday
+                    <span class="time">9:30 AM – 12:00 AM</span>
+                  </li>
+                  <li>
+                    <span class="dot"></span> Sunday
+                    <span class="time">9:30 AM – 12:00 AM</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- End OpeningTime -->
+          </div>
+          <div class="stickyWrapper">
+            <h2>صالون جدو - مدينة نصر</h2>
+
+            <div class="rating">
+              <span class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-stroke"></i>
+                <i class="far fa-star"></i
+              ></span>
+              <span class="score">4.7</span>
+              <a href="#" class="reviews">(184)</a>
+            </div>
+
+            <div class="tags">
+              <span class="tag featured">Featured</span>
+              <span class="tag deals">Deals</span>
+            </div>
+
+            <button class="book-btn">Book now</button>
+            <!-- if open replase no with yes -->
+            <div class="status no">Closed - opens at 9:30 AM</div>
+
+            <div class="location">
+              Al Manteqah as Sadesah, Nasr City, محافظة القاهرة<br />
+              <a href="#" class="direction-link">Get directions</a>
+            </div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+      </div>
+    </div>
     <!-- bootstrap -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -35,6 +372,96 @@
     <!-- Swiper Libarary  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- main js -->
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.js"></script>
+    <script>
+      let servicesData = {
+        hair: [
+          {
+            title: "قص شعر",
+            duration: "40 min",
+            price: " 121.50",
+            description: "قص احترافي يناسب شكل الوجه وأحدث صيحات الموضة.",
+            features: [
+              "أدوات معقمة",
+              "اختيار ستايل حسب الطلب",
+              "يناسب جميع الأعمار",
+            ],
+          },
+          {
+            title: "حلاقة ذقن",
+            duration: "25 min",
+            price: " 94.50",
+            description: "حلاقة دقيقه باستخدام أدوات نظيفة وآمنة.",
+            features: ["تحديد دقيق", "ماء ساخن", "معقم بعد الحلاقة"],
+          },
+          {
+            title: "استشوار للشعر",
+            duration: "15 min",
+            price: " 81",
+            description: "تصفيف الشعر باستخدام أفضل الأدوات والمنتجات.",
+            features: ["منتجات حماية الشعر", "ستايل حسب الطلب"],
+          },
+        ],
+        face: [
+          {
+            title: "تنظيف بشرة",
+            duration: "30 min",
+            price: " 150",
+            description: "تنظيف عميق لإزالة الشوائب وتجديد نضارة البشرة.",
+            features: ["بخار مهدئ", "أقنعة مغذية", "ترطيب مكثف"],
+          },
+          {
+            title: "ماسكات طبيعية",
+            duration: "20 min",
+            price: " 100",
+            description: "استخدام ماسكات طبيعية مناسبة لجميع أنواع البشرة.",
+            features: ["مكونات طبيعية", "نتائج فورية", "آمنة للحساسين"],
+          },
+        ],
+        treatment: [
+          {
+            title: "علاج تساقط الشعر",
+            duration: "45 min",
+            price: " 200",
+            description: "علاج فعال لتقوية بصيلات الشعر ومنع التساقط.",
+            features: [
+              "مكونات طبية",
+              "تدليك لفروة الرأس",
+              "نتائج ملحوظة بعد أول جلسة",
+            ],
+          },
+        ],
+        offers: [
+          {
+            title: "باقة قص وحلاقة",
+            duration: "60 min",
+            price: " 180",
+            description: "باقة شاملة تشمل قص الشعر وحلاقة الذقن بسعر مميز.",
+            features: ["أدوات جديدة لكل عميل", "ستايل احترافي", "خدمة سريعة"],
+          },
+        ],
+        others: [
+          {
+            title: "تدليك",
+            duration: "30 min",
+            price: " 120",
+            description: "تدليك مريح لتخفيف التوتر والإجهاد اليومي.",
+            features: ["زيوت عطرية", "حركات احترافية", "بيئة مريحة"],
+          },
+        ],
+        vip: [
+          {
+            title: "VIP قص وحلاقة",
+            duration: "60 min",
+            price: " 300",
+            description: "خدمة VIP تشمل رعاية كاملة وتجربة فاخرة.",
+            features: ["مشروب مجاني", "أدوات فاخرة", "خصوصية تامة"],
+          },
+        ],
+      };
+
+      // Load default services
+      renderServices("hair");
+    </script>
   </body>
 </html>

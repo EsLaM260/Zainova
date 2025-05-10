@@ -27,14 +27,16 @@
 
     <!-- Start Header -->
     <header>
-      <div class="icon">
-        <img src="image/zainova_logo.png" alt="">
+      <div class="container">
+        <div class="icon">
+          <img src="image/zainova_logo.png" alt="" />
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <ul class="list" id="navList">
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">List your bus</a></li>
+        </ul>
       </div>
-      <ul class="list">
-        <li>
-          
-        </li>
-      </ul>
     </header>
     <!-- End Header -->
 
@@ -45,44 +47,42 @@
     <div class="displayMainCard">
       <div class="container">
         <div class="dots dots-up"></div>
-        <div class="localcontainer">
-          <div class="item-head">
-            <h2>Recomended</h2>
-          </div>
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <!-- Start Loop Here -->
-              <div class="swiper-slide">
-                <a href="details.php" class="box">
-                  <div class="image">
-                    <img
-                      src="image/e47c5cd6-c96c-4cf6-99a3-61f6561cd79b.avif"
-                      alt="property image"
-                      onerror="this.onerror=null; this.src='image/no-image.png';" />
+        <div class="item-head">
+          <h2>Recomended</h2>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Start Loop Here -->
+            <div class="swiper-slide">
+              <a href="details.php" class="box">
+                <div class="image">
+                  <img
+                    src="image/e47c5cd6-c96c-4cf6-99a3-61f6561cd79b.avif"
+                    alt="property image"
+                    onerror="this.onerror=null; this.src='image/no-image.png';" />
+                </div>
+                <div class="details-box">
+                  <h2>Main Title For This</h2>
+                  <div class="rate">
+                    4.9
+                    <i class="fa-solid fa-star"></i>
+                    <span>(49)</span>
                   </div>
-                  <div class="details-box">
-                    <h2>Main Title For This</h2>
-                    <div class="rate">
-                      4.9
-                      <i class="fa-solid fa-star"></i>
-                      <span>(49)</span>
-                    </div>
-                    <p class="address">
-                      shobra masr road elfarag shobra hi eslam mostafa hussien
-                    </p>
-                    <div class="category">category</div>
-                  </div>
-                </a>
-              </div>
-              <!-- End Loop Here -->
+                  <p class="address">
+                    shobra masr road elfarag shobra hi eslam mostafa hussien
+                  </p>
+                  <div class="category">category</div>
+                </div>
+              </a>
             </div>
+            <!-- End Loop Here -->
           </div>
-          <div class="swiper-button-prev">
-            <i class="fa-solid fa-arrow-left"></i>
-          </div>
-          <div class="swiper-button-next">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fa-solid fa-arrow-right"></i>
         </div>
       </div>
     </div>

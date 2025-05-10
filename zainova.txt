@@ -1,0 +1,12 @@
+1-home page => midum
+2- details page => hard 
+3- book page => hard
+4- search page => hard
+5- login page => simple
+6- profile page => midum
+7- checkout page (ui non) => simple
+8- business page => midum
+
+
+
+21/5 
